@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="HienSecomm_Secomm::secomm" title="Secomm" module="HienSecomm_Secomm" sortOrder="51" resource="HienSecomm_Secomm::secomm"/>
+        <add id="HienSecomm_Secomm::index" title="All Posts" module="HienSecomm_Secomm" sortOrder="10" parent="HienSecomm_Secomm::secomm" action="secommblog/index" resource="HienSecomm_Secomm::index" />
+        <add id="HienSecomm_Secomm::configuration" title="Configuration" module="HienSecomm_Secomm" sortOrder="99" parent="HienSecomm_Secomm::secomm" action="secommblog/index" resource="HienSecomm_Secomm::configuration"/>
+    </menu>
+</config>

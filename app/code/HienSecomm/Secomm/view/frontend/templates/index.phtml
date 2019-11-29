@@ -1,0 +1,37 @@
+<style>
+    table {  font-family: arial, sans-serif;  border-collapse: collapse;  width: 100%;  margin-top: 30px;}
+    td, th {  border: 1px solid #dddddd;  text-align: left;  padding: 8px;  }
+    tr:nth-child(even) { background-color: #dddddd; }
+    .entity_id{width:2%} .post-name{width:30%}
+
+</style>
+
+<table>
+    <tr>
+        <th class="entity_id">Id</th>
+        <th class="title">Title</th>
+        <th class="content">Content</th>
+        <th class="feature_image">Feature Image</th>
+        <th class="created_at">Created At</th>
+        <th class="updated_at">Update At</th>
+        <th class="action">Action</th>
+    </tr>
+    <?php
+    foreach ($block->getPost() as $key=>$post){
+        $item= $post->getData();
+        $create_at = $block->formatDateTimetoDate($item['created_at']);
+        echo '<tr>
+            <td>'.$item['entity_id'].'</td>
+            <td>'.$item['title'].'</td>
+            <td>'.$item['content'].'</td>
+            <td>'.$item['feature_image'].'</td>
+            <td>'.$create_at.'</td>
+            <td>'.$item['updated_at'].'</td>
+            <td><a href="'.$block->actionView($item['entity_id']).'">view</a></td>
+          </tr>';
+}
+    ?>
+</table>
+
+</body>
+</html>

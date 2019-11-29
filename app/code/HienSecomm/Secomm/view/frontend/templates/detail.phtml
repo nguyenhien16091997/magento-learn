@@ -1,0 +1,19 @@
+
+<?php $item = $block->getPostById(); ?>
+
+<form class="form form-edit-account" >
+    <label>id</label>
+    <input value="<?=$item['entity_id']?>"/>
+    <label>title</label>
+    <input value="<?=$item['title']?>"/>
+    <label>content</label>
+    <input value="<?=$item['content']?>"/>
+    <label>feature_image</label>
+    <input value="<?=$item['feature_image']?>"/>
+    <label>created_at</label>
+    <input value="<?=$item['created_at']?>"/>
+    <label>updated_at</label>
+    <input value="<?=$item['updated_at']?>"/>
+</form>
+
+
